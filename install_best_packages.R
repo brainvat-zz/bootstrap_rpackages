@@ -55,6 +55,7 @@ if (prerequisites_installed) {
 
 if (pkgTest("lubridate")) { devtools::install_github("hadley/lubridate") } 
 if (pkgTest("ggplot2")) { install.packages("ggplot2") } 
+if (pkgTest("littler")) { install.packages("littler") }
 if (pkgTest("qcc")) { install.packages("qcc") } 
 if (pkgTest("randomForest")) { install.packages("randomForest") } 
 if (pkgTest("downloader")) { devtools::install_github("wch/downloader") } 
