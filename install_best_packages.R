@@ -26,6 +26,7 @@ if (pkgTest("sqldf")) { devtools::install_github("ggrothendieck/sqldf") }
 if (pkgTest("forecast")) { install.packages("forecast") } 
 if (pkgTest("plyr")) { devtools::install_github("hadley/plyr") } 
 if (pkgTest("stringr")) { devtools::install_github("hadley/stringr") }
+if (pkgTest("ggvis")) { devtools::install_github("rstudio/ggvis") }
 
 # you may have to install numerous libraries to get these packages to work
 if (prerequisites_installed) {
