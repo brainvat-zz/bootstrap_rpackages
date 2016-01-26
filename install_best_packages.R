@@ -19,6 +19,10 @@ pkgTest <- function(x) {
   not_found
 }
 
+if (pkgTest("webp")) { devtools::install_github("jeroenooms/webp")}
+if (pkgTest("jpeg")) { devtools::install_github("s-u/jpeg")}
+if (pkgTest("svglite")) { devtools::install_github("hadley/svglite")}
+if (pkgTest("rsvg")) { devtools::install_github("jeroenooms/rsvg")}
 if (pkgTest("Rcpp")) { devtools::install_github("RcppCore/Rcpp") }
 if (pkgTest("DBI")) { install.packages("DBI") }
 if (pkgTest("devtools")) { devtools::install_github("hadley/devtools") } 
@@ -30,7 +34,7 @@ if (pkgTest("ggvis")) { devtools::install_github("rstudio/ggvis") }
 
 # you may have to install numerous libraries to get these packages to work
 if (prerequisites_installed) {
-    
+  
   # (on Mac, try) brew install postgresql
   if (pkgTest("RPostgreSQL")) { install.packages("RPostgreSQL") }  
   
@@ -42,7 +46,7 @@ if (prerequisites_installed) {
     devtools::install_github("rstats-db/DBI")
     devtools::install_github("rstats-db/RMySQL") 
   }
-
+  
   if (pkgTest("RMongo")) { install.packages("RMongo") }
   
   # needs drat
