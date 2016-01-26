@@ -29,6 +29,15 @@ if (pkgTest("webp")) { devtools::install_github("jeroenooms/webp")}
 if (pkgTest("jpeg")) { devtools::install_github("s-u/jpeg")}
 if (pkgTest("svglite")) { devtools::install_github("hadley/svglite")}
 if (pkgTest("rsvg")) { devtools::install_github("jeroenooms/rsvg")}
+
+# text
+if (pkgTest("showtextdb")) { devtools::install_github("cran/showtextdb")}
+if (pkgTest("sysfonts")) { devtools::install_github("yixuan/sysfonts")}
+if (pkgTest("showtext")) { devtools::install_github("yixuan/showtext")}
+if (pkgTest("extrafont")) { devtools::install_github("wch/extrafont")}
+if (pkgTest("fontcm")) { devtools::install_github("wch/fontcm")}
+
+# databases
 if (pkgTest("Rcpp")) { devtools::install_github("RcppCore/Rcpp") }
 if (pkgTest("DBI")) { install.packages("DBI") }
 if (pkgTest("devtools")) { devtools::install_github("hadley/devtools") } 
@@ -64,6 +73,9 @@ if (prerequisites_installed) {
   if (pkgTest("RSQLite")) { install.packages("RSQLite") } 
 }
 
+# hadley and other stuff
+
+if (pkgTest("scales")) { devtools::install_github("hadley/scales")}
 if (pkgTest("lubridate")) { devtools::install_github("hadley/lubridate") } 
 if (pkgTest("ggplot2")) { install.packages("ggplot2") } 
 if (pkgTest("littler")) { install.packages("littler") }
@@ -108,3 +120,24 @@ if (pkgTest("readxl")) { devtools::install_github("hadley/readxl") }
 if (pkgTest("roxygen2")) { devtools::install_github("klutometis/roxygen") } 
 if (pkgTest("RSiteCatalyst")) { devtools::install_github("randyzwitch/RSiteCatalyst") } 
 if (pkgTest("httr")) { devtools::install_github("hadley/httr")}
+if (pkgTest("GGally")) { devtools::install_github("cran/GGally")}
+if (pkgTest("rpart.plot")) { devtools::install_github("cran/rpart.plot")}
+if (pkgTest("partykit")) { devtools::install_github("cran/partykit")}
+
+# h2o
+# 
+if (pkgTest("h2o")) { 
+  # from: http://www.h2o.ai/download/h2o/r
+  # The following two commands remove any previously installed H2O packages for R.
+  if ("package:h2o" %in% search()) { detach("package:h2o", unload=TRUE) }
+  if ("h2o" %in% rownames(installed.packages())) { remove.packages("h2o") }
+  
+  # Next, we download packages that H2O depends on.
+  pkgs <- c("methods","statmod","stats","graphics","RCurl","jsonlite","tools","utils")
+  for (pkg in pkgs) {
+    if (! (pkg %in% rownames(installed.packages()))) { install.packages(pkg) }
+  }
+  
+  # Now we download, install and initialize the H2O package for R.
+  install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/rel-tibshirani/8/R")))
+}
