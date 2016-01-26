@@ -145,3 +145,5 @@ if (pkgTest("doMC")) { devtools::install_github("cran/doMC")}
 if (pkgTest("xgboost")) { install.packages("xgboost") }
 if (pkgTest("Matrix")) { install.packages("Matrix") }
 if (pkgTest("survey")) { install.packages("survey") }
+if (pkgTest("ganalytics")) { devtools::install_github("jdeboer/ganalytics") }
+
