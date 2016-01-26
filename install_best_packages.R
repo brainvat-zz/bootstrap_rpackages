@@ -141,3 +141,7 @@ if (pkgTest("h2o")) {
   # Now we download, install and initialize the H2O package for R.
   install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/rel-tibshirani/8/R")))
 }
+if (pkgTest("doMC")) { devtools::install_github("cran/doMC")}
+if (pkgTest("xgboost")) { install.packages("xgboost") }
+if (pkgTest("Matrix")) { install.packages("Matrix") }
+if (pkgTest("survey")) { install.packages("survey") }
