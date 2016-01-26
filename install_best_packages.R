@@ -19,6 +19,12 @@ pkgTest <- function(x) {
   not_found
 }
 
+# Pay attention to R compiler warnings
+# You may need to install supporting libraries outside of R
+# ex:
+#  brew install webp
+#  brew install librsvg
+#
 if (pkgTest("webp")) { devtools::install_github("jeroenooms/webp")}
 if (pkgTest("jpeg")) { devtools::install_github("s-u/jpeg")}
 if (pkgTest("svglite")) { devtools::install_github("hadley/svglite")}
