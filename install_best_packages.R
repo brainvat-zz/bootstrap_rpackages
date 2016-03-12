@@ -47,6 +47,12 @@ if (pkgTest("plyr")) { devtools::install_github("hadley/plyr") }
 if (pkgTest("stringr")) { devtools::install_github("hadley/stringr") }
 if (pkgTest("ggvis")) { devtools::install_github("rstudio/ggvis") }
 
+# big memory
+if (pkgTest("ff")) { install.packages("ff") }
+if (pkgTest("ffbase")) { install.packages("ffbase") }
+if (pkgTest("bigmemory")) { install.packages("bigmemory") }
+if (pkgTest("biglm")) { install.packages("biglm") }
+
 # you may have to install numerous libraries to get these packages to work
 if (prerequisites_installed) {
   
