@@ -123,6 +123,7 @@ if (pkgTest("httr")) { devtools::install_github("hadley/httr")}
 if (pkgTest("GGally")) { devtools::install_github("cran/GGally")}
 if (pkgTest("rpart.plot")) { devtools::install_github("cran/rpart.plot")}
 if (pkgTest("partykit")) { devtools::install_github("cran/partykit")}
+if (pkgTest("dict")) { devtools::install_github("mkuhn/dict")}
 
 # h2o
 # 
