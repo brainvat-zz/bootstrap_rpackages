@@ -53,6 +53,11 @@ if (pkgTest("ffbase")) { install.packages("ffbase") }
 if (pkgTest("bigmemory")) { install.packages("bigmemory") }
 if (pkgTest("biglm")) { install.packages("biglm") }
 
+# amazon redshift help
+if (pkgTest("RPostgres")) { devtools::install_github("rstats-db/RPostgres") }
+if (pkgTest("aws.s3")) { install.packages("aws.s3", repos = c(getOption("repos"), "http://cloudyr.github.io/drat")) }
+if (pkgTest("redshiftTools")) { devtools::install_github("sicarul/redshiftTools") }
+
 # you may have to install numerous libraries to get these packages to work
 if (prerequisites_installed) {
   
